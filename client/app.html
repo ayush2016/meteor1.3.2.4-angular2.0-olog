@@ -1,0 +1,42 @@
+Welcome to Olog!
+<!--
+<ul>
+    <li>
+        <span>Hire Truck</span>
+        <p>Please go to our Hire Truck android app.</p>
+    </li>
+
+    <li>
+        <span>Vendor Registration</span>
+        <p>Sign in using our Vendor android app.</p>
+    </li>
+</ul> -->
+
+<!-- In Angular, the view is a projection of the model through the HTML template.
+This means that whenever the model changes, Angular refreshes the appropriate
+binding points, which updates the view. -->
+
+
+<div>
+
+    <!--We can load the new PartiesForm component on the page by placing the parties-form tag
+    in the root template app.html -->
+<br><br>
+    Place a order! <br><br>
+    <orders-form></orders-form>
+
+    <br><br>
+
+    <ul>
+        <li *ngFor="let order of orders">
+            <!-- The *ngFor="let party of parties" attribute in the li tag is an Angular
+ repeater directive. The repeater tells Angular to create a li element for each
+  party in the list using the li tag as the template. -->
+            Order_Name: {{order.name}}
+            <p>Order_Description: {{order.description}}</p>
+            <p>Order_Source: {{order.source}}</p>
+            <p>Order_Destination: {{order.destination}}</p>
+            <p>Order_Location: {{order.location}}</p>
+        </li>
+    </ul>
+</div>
