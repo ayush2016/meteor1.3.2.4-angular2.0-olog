@@ -16,4 +16,7 @@ two databases. One on the client for fast changes, another behind the server for
 a special protocol (called DDP) that synchronizes data between two databases
 a bunch of small things that make creating an app with Meteor easier and more developer friendly!
 
+olog@olog.in
+olog
+
 

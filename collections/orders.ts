@@ -2,6 +2,7 @@
  * Created by Ayush on 16-06-2016.
  */
 import {Mongo} from 'meteor/mongo';
+import {Meteor} from 'meteor/meteor';
 
 //The TypeScript compiler converts .ts files to ES5, then registers a CommonJS module
 // with the same name as the relative path to the file in the app.
@@ -19,3 +20,28 @@ import {Mongo} from 'meteor/mongo';
 //All synchronization between these two versions of collections is handled by Meteor.
 
 export let Orders = new Mongo.Collection('orders');
+
+//In only 10 lines of code we've specified that inserts, updates and
+//removes can only be completed if a user is logged in.
+//The callbacks passed to the Parties.allow are executed on the server only. The
+//client optimistically assumes that any action (such as removal of a party) will
+//succeed, and reverts the action as soon as the server denies permission.
+
+Orders.allow({
+    insert: function() {
+        let user = Meteor.user();
+
+        return !!user;
+    },
+    update: function() {
+        let user = Meteor.user();
+        return !!user;
+    },
+    remove: function() {
+        let user = Meteor.user();
+
+        return !!user;
+    }
+});
+
+

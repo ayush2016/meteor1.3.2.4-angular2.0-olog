@@ -11,6 +11,9 @@ import { Orders }   from '../collections/orders';
 import { Mongo }     from 'meteor/mongo';
 import { OrdersForm } from './imports/orders-form/orders-form';
 
+import { LoginButtons } from 'angular2-meteor-accounts-ui';
+
+
 
 @Component({
   selector: 'app',
@@ -20,7 +23,7 @@ import { OrdersForm } from './imports/orders-form/orders-form';
   templateUrl: '/client/app.html',
   //Our component is linked to it's template with the templateUrl property.
 
-   directives: [OrdersForm]
+   directives: [OrdersForm, LoginButtons]
   //There is one more required step in Angular 2 to load a component. The Socially component is not aware
   // of child components unless you explicitly let it know what to look for. Add the PartiesForm class as
   // a directive of the Socially, like this: directives: [PartiesForm]
