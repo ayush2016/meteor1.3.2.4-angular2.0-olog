@@ -13,6 +13,9 @@ import { OrdersForm } from './imports/orders-form/orders-form';
 
 import { LoginButtons } from 'angular2-meteor-accounts-ui';
 
+import { MeteorComponent } from 'angular2-meteor';
+
+
 
 
 @Component({
@@ -67,11 +70,15 @@ import { LoginButtons } from 'angular2-meteor-accounts-ui';
   }
 } */
 
-class Olog {
+class Olog extends MeteorComponent {
   orders: Mongo.Cursor<Object>;
 
   constructor () {
-    this.orders = Orders.find();
+    //this.orders = Orders.find();
+    super();
+    this.subscribe('orders', () => {
+      this.orders = Orders.find();
+    }, true);
   }
 //The Mongo Collection Parties has a method called "remove". We search for the relevant
 //party by its identifier, _id, and delete it.
