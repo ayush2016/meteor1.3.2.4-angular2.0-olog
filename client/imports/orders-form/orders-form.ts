@@ -52,7 +52,6 @@ export class OrdersForm {
                     description: order.description,
                     source: order.source,
                     destination: order.destination,
-                    'public': order.public,
                     owner: Meteor.userId()
                 });
 //TypeScript doesn't know that controls properties are of Control type. That's why we
@@ -61,12 +60,11 @@ export class OrdersForm {
                 (<Control>this.ordersForm.controls['description']).updateValue('');
                 (<Control>this.ordersForm.controls['source']).updateValue('');
                 (<Control>this.ordersForm.controls['destination']).updateValue('');
-                (<Control>this.ordersForm.controls['public']).updateValue(false);
             }
-        }else {
-            alert('Please log in to add a party');
+            else {
+                alert('Please log in to add a party');
+            }
         }
-
     }
 
 }

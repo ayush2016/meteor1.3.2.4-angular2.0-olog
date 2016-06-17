@@ -10,8 +10,7 @@ export function loadOrders() {
                 'description': 'Description1',
                 'source': 'Source1',
                 'destination':'Destination1',
-                'location':'Location1',
-                'public': false
+                'location':'Location1'
 
             },
             {'name': 'Name2',
@@ -19,14 +18,14 @@ export function loadOrders() {
                 'source': 'Source2',
                 'destination':'Destination2',
                 'location':'Location2',
-                'public': false
+
             },
             {'name': 'Name3',
                 'description': 'Description3',
                 'source': 'Source3',
                 'destination':'Destination3',
                 'location':'Location3',
-                'public': false
+
             }
         ];
 

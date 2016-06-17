@@ -1,4 +1,3 @@
-
 Meteor makes writing distributed client code as simple as talking to a local database.
 Every Meteor client includes an in-memory database cache. To manage the client cache, the
 server publishes sets of JSON documents, and the client subscribes to these sets. As documents
@@ -19,4 +18,6 @@ a bunch of small things that make creating an app with Meteor easier and more de
 olog@olog.in
 olog
 
+snm@snm.in
+snm
 
