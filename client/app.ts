@@ -70,5 +70,11 @@ class Olog {
   constructor () {
     this.orders = Orders.find();
   }
+//The Mongo Collection Parties has a method called "remove". We search for the relevant
+//party by its identifier, _id, and delete it.
+
+  removeOrder(order) {
+    Orders.remove(order._id);
+  }
 }
 bootstrap(Olog);

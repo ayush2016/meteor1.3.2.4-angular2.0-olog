@@ -1,4 +1,5 @@
-mMeteor makes writing distributed client code as simple as talking to a local database.
+
+Meteor makes writing distributed client code as simple as talking to a local database.
 Every Meteor client includes an in-memory database cache. To manage the client cache, the
 server publishes sets of JSON documents, and the client subscribes to these sets. As documents
 in a set change, the server patches each client's cache automatically.
@@ -15,5 +16,4 @@ two databases. One on the client for fast changes, another behind the server for
 a special protocol (called DDP) that synchronizes data between two databases
 a bunch of small things that make creating an app with Meteor easier and more developer friendly!
 
-In Mongo terminology, items inside collections are called documents. So, let's insert some documents
-into our collection by using the server database console.m
+

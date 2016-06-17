@@ -1,15 +1,27 @@
-<form>
+<!--Now let's bind the form model to the form and its input elements. Here we use
+special form directives: ngFormModel and ngControl, that do all the magic by binding
+properties, that we just defined, to the DOM elements.-->
+
+<!-- It's worth mentioning one more great feature that appeared in Angular 2. It's possible
+ now to define and use local variables in a template. For example, to add a party we'll need
+ to take the current state of the form and pass it to an event handler. -->
+
+<form [ngFormModel]="ordersForm" #f="ngForm" (submit)="addOrder(f.value)">
+
+    <!--In Angular 2, events are indicated by the round bracket () syntax.
+     Here we are telling Angular to call a method addParty on submit and pass in the value of the form, f. -->
+
     <label>Name</label>
-    <input type="text">
+    <input type="text" ngControl="name">
 
     <label>Description</label>
-    <input type="text">
+    <input type="text" ngControl="description">
 
     <label>Source</label>
-    <input type="text">
+    <input type="text" ngControl="source">
 
     <label>Destination</label>
-    <input type="text">
+    <input type="text" ngControl="destination">
 
     <button>Add</button>
 </form>

@@ -37,6 +37,7 @@ binding points, which updates the view. -->
             <p>Order_Source: {{order.source}}</p>
             <p>Order_Destination: {{order.destination}}</p>
             <p>Order_Location: {{order.location}}</p>
+            <button (click)="removeOrder(order)">X</button>
         </li>
     </ul>
 </div>
